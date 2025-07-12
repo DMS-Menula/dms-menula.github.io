@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="google-site-verification"
+      content="Hn_2i0a8eTYsreWw57NjAd-vTqCyZAneWNi6O5lH6T8"
+    />
+    <title>Menula De Silva | Creative Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+    <div class="canvas-container" id="canvas-container"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" style="z-index: 1000; background-color: rgba(47, 46, 65, 0.9);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">Menula <span class="text-primary">De Silva</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="home">
+        <div class="hero-content d-flex align-items-center" style="z-index: 5; position: relative;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-white" style="z-index: 5; position: relative;">
+                        <!-- Added text-white class -->
+                        <h4 class="text-primary mb-3 text-xl">Hello, I'm</h4>
+                        <h1 class="display-3 fw-bold mb-4 text-white">Menula De Silva</h1>
+                        <h2 class="mb-4 text-white fs-5">Creative Developer & Designer</h2>
+                        <p class="lead mb-4 text-white">I craft digital experiences that are beautiful, functional, and
+                            user-friendly.</p>
+                        <div class="d-flex flex-wrap gap-3 hero-buttons" style="z-index: 5; position: relative;">
+                            <a href="#projects" class="btn btn-primary btn-lg px-4 py-2 cursor-pointer">
+                                <i class="fas fa-eye me-2"></i>View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-2 cursor-pointer">
+                                <i class="fas fa-paper-plane me-2"></i>Contact Me
+                            </a>
+                        </div>
+                        <div class="mt-5 d-flex gap-3" style="z-index: 5; position: relative;">
+                            <a target="_blank"
+                                href="https://www.linkedin.com/in/dinayadura-menula-sasen-de-silva-573810310/"
+                                class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+                            <a target="_blank" href="https://github.com/DMS-Menula" class="text-white fs-4"><i
+                                    class="fab fa-github"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/@blockcodingpro?sub_confirmation=1"
+                                class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+                            <a target="_blank" href="https://stackoverflow.com/users/30327666/menula-de-silva"
+                                class="text-white fs-4"><i class="fab fa-stack-overflow"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/share/17pU7kXijN/"
+                                class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+                            <a target="_blank" href="https://x.com/dmsmenula"
+                                class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="floating-shapes">
+                            <div class="shape shape-1" style="width: 300px; height: 300px; top: -50px; right: -50px;">
+                            </div>
+                            <div class="shape shape-2" style="width: 200px; height: 200px; bottom: 50px; right: 100px;">
+                            </div>
+                        </div>
+                        <img src="img/top.jpg"
+                            alt="Menula De Silva" class="img-fluid rounded-circle floating-element"
+                            style="max-width: 400px; border: 5px solid var(--primary);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="scrollToTop();" href="#"
+        class="btn btn-primary btn-lg back-to-top rounded-5 position-fixed bottom-5 end-5 d-none" id="back-to-top"
+        aria-hidden="true" style="width:50px; z-index: 100;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <section id="about" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <img src="img/me.png"
+                        alt="About Menula" class="img-fluid rounded shadow-lg floating-element">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-1 fs-3">About <span class="text-primary">Me</span></h2>
+                    <p class="lead mb-4 mt-3">I'm a passionate developer and designer with a focus on creating
+                        exceptional
+                        digital experiences.</p>
+                    <p>Hello! I'm Menula Sasen De Silva, a 12-year-old tech enthusiast and aspiring innovator.
+                        Currently, I am a Grade 7 student at St. Aloysius National School in Ratnapura, Sri Lanka—a gem
+                        city I proudly call my hometown. My journey in the world of technology began early, and I’ve
+                        already completed several courses to build a strong foundation in programming and web
+                        development. Some of my key achievements include: Web Development: Proficient in HTML, CSS,
+                        JavaScript, and PHP, thanks to my studies at DP Education IT Campus. Python Programming:
+                        Completed the Python for Beginners course from the University of Moratuwa and gained hands-on
+                        experience with DP Python Robot. Arduino & Robotics: Explored the exciting realm of electronics
+                        through the Arduino for Beginners course offered by STEM Academy (India). Design Skills: Learned
+                        the essentials of Web Design for Beginners at the University of Moratuwa. Currently, I am
+                        advancing my programming expertise at iCET Campus, where I’m mastering topics like Java and
+                        database management. I’m also proud to be an undergraduate student at the Institute of Java,
+                        diving deeper into the intricacies of software development. I love exploring new technologies
+                        and am passionate about creating solutions that make a difference. Whether it's building
+                        websites, developing applications, or tinkering with robotics, my curiosity keeps me pushing the
+                        boundaries of innovation! </p>
+                    <br />
+                    <p>When I'm not coding or designing, you can find me exploring new technologies, contributing to
+                        open-source projects, or mentoring aspiring developers.</p>
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user-graduate text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Education</h5>
+                                    <p class="mb-0">BSc in Computer Science (Ongoing)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-briefcase text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Experience</h5>
+                                    <p class="mb-0">5+ Years in Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-project-diagram text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Projects</h5>
+                                    <p class="mb-0">150+ Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-globe text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Location</h5>
+                                    <p class="mb-0">Ratnapura, Sri Lanka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-1 fs-3">My <span class="text-primary">Skills</span></h2>
+                <p class="lead mt-3">The tools and technologies I work with</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card bg-white p-4 text-center h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-paint-brush text-primary fs-1"></i>
+                        </div>
+                        <h4>Design</h4>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>UI/UX Development</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Wireframing</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Figma</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Web Design/Development
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Illustration</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>Wordpress</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card bg-white p-4 text-center h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-code text-primary fs-1"></i>
+                        </div>
+                        <h4>Frontend</h4>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>HTML5/CSS3</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Tailwind CSS</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Bootstrap</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>JavaScript</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>TypeScript</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>React Native</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>React.js</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Angular.js</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>jQuery</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Flutter </li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Flutter Flow</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>Three.js</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card bg-white p-4 text-center h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-server text-primary fs-1"></i>
+                        </div>
+                        <h4>Backend</h4>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Node.js</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Express</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>PHP</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Firebase</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>MYSQL</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>JAVA</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>REST APIs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card bg-white p-4 text-center h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-cogs text-primary fs-1"></i>
+                        </div>
+                        <h4>Other</h4>
+                        <ul class="list-unstyled text-start mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Git/GitHub</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Leetcode</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Stack Overflow</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Youtube Video Creating
+                            </li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Social Media</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Cyber Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-1 fs-3">My <span class="text-primary">Projects</span></h2>
+                <p class="lead mt-3">Some of my recent work</p>
+            </div>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/1.png" alt="Project 1"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Gem City App</h4>
+                            <p class="mb-2">Gem City Of Sri Lanka . Made With Code.org. Spent 10 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">Drag And Drop Coding</span>
+                                <span class="badge bg-primary">Code.org</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://studio.code.org/projects/applab/k0CXhUKX52b12a1BLJpluNthx5hIwApE_k9iqzmwTJc"
+                                    class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/2.png" alt="Project 2"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Wonder Of Sabaragamuwa</h4>
+                            <p class="mb-2">Wonder Of Sabaragamuwa | A Tourism Web Page . Spent 14 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">JS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://ratnapura.glitch.me/" class="btn btn-sm btn-outline-primary">View
+                                    Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/3.png" alt="Project 3"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">To Do List</h4>
+                            <p class="mb-2">To Do List App Made With Frontend Languages. Spent 2 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">JS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://todl.glitch.me/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/4.png" alt="Project 4"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Weather App</h4>
+                            <p class="mb-2">Real Time Weather Application . Spent 2 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">JS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://liveweatherapp.glitch.me/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/5.png" alt="Project 5"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Instant AI</h4>
+                            <p class="mb-2">A Powerful AI Made With Gemini API .Spent 3 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">Js</span>
+                                <span class="badge bg-primary">Gemini API</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://instantai.glitch.me/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/6.jpg" alt="Project 6"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">3D Solar System</h4>
+                            <p class="mb-2">A 3D Full Detailed Solar System App . Spent 8 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">Three.js</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://dms-soylar-system.surge.sh/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/7.png" alt="Project 7"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Mos Burgers</h4>
+                            <p class="mb-2">A Ecommerce Application Named MOS Burgers . Spent 15 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">JS</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://mosburgers.vercel.app/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/8.webp" alt="Project 8"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Ministry Of Environment And Agriculture</h4>
+                            <p class="mb-2">Ministry Of Environment And Agriculture | St.Aloysius College Ratnapura . Spent 5 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">Godaddy Sites</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://saceaa.godaddysites.com/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/9.jpg" alt="Project 9"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Sri Lanka | Tourism Website</h4>
+                            <p class="mb-2">A Tourism Website . Spent 4 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">JQuery</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://srilanka.surge.sh/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/10.jpg" alt="Project 10"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">MinefunCraft</h4>
+                            <p class="mb-2">A 3d Game That Similar To Minecraft . Spent 24 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">Three.js</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">WebGL</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://minefuncraft.vercel.app/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="https://github.com/DMS-Menula/Minecraft-With-HTML-CSS-JS" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/11.png" alt="Project 11"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Note It</h4>
+                            <p class="mb-2">An Interesting Noting App . Spent 5 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">React Native</span>
+                                <span class="badge bg-primary">React Native Paper</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://drive.google.com/file/d/1OR0zq1iKQCMJaqitABygLY7D82ZbM_53/view" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="#" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 12 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="img/12.jpg" alt="Project 12"
+                                class="img-fluid project-image w-100">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mt-2 mb-3">Maduranga Wateproofing</h4>
+                            <p class="mb-2">A Company Portfolio For A Waterproofing Company  . Spent 8 Days To Complete .</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">Tailwind Css / Bootstrap</span>
+                                <span class="badge bg-primary">Email.js</span>
+                                <span class="badge bg-primary">JS</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a target="_blank" href="https://maduranga-wateproofing.vercel.app/" class="btn btn-sm btn-outline-primary">View Demo</a>
+                                <a target="_blank" href="https://github.com/DMS-Menula/Maduranga-Wateproofing" class="btn btn-sm btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary btn-lg px-4">
+                    <i class="fas fa-folder-open me-2"></i>View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-1 fs-3">Work <span class="text-primary">Experience</span></h2>
+                <p class="lead mt-3">My professional journey</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content p-4 bg-white rounded shadow-sm">
+                                <h4>DP IT Campus</h4>
+                                <h5 class="text-primary">1st Student Completed 325+ Project In Ratnapura</h5>
+                                <p class="text-muted mb-2"><i class="far fa-calendar-alt me-2"></i>2023 - 2024</p>
+                                <ul>
+                                    <li>JS, Python, Flutter, FlutterFlow, React, Wordpress</li>
+                                    <li>Dp Coding School 325+ Projects</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content p-4 bg-white rounded shadow-sm">
+                                <h4>University Of Moratuwa | Online Courses </h4>
+                                <h5 class="text-primary">Remote Student Of UOM</h5>
+                                <p class="text-muted mb-2"><i class="far fa-calendar-alt me-2"></i>2023 - 2024</p>
+                                <ul>
+                                    <li>Designed and developed 30+ client websites</li>
+                                    <li>Python Programming</li>
+                                    <li>Web Server Handling</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content p-4 bg-white rounded shadow-sm">
+                                <h4>iCET Campus</h4>
+                                <h5 class="text-primary">Student Of iCET Campus</h5>
+                                <p class="text-muted mb-2"><i class="far fa-calendar-alt me-2"></i>2024 - 2025</p>
+                                <ul>
+                                    <li>Enterprice Application Development</li>
+                                    <li>Object Oriented Programming</li>
+                                    <li>Spring Boot And Java Based Applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Education -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content p-4 bg-white rounded shadow-sm">
+                                <h4>BSc in Computer Science</h4>
+                                <h5 class="text-primary">Java Institute For Advance Technology</h5>
+                                <p class="text-muted mb-2"><i class="far fa-calendar-alt me-2"></i>2025 - Present</p>
+                                <ul>
+                                    <li>Web Programming - 1</li>
+                                    <li>Database Management Systems - 1</li>
+                                    <li>Robotic And IOT - 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-1 fs-3">Get In <span class="text-primary">Touch</span></h2>
+                <p class="lead mt-3">Let's work together</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Location</h5>
+                                <p class="mb-0">Rathnapura , Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0">rusirunavanjaya2004@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Phone</h5>
+                                <p class="mb-0">+94 70 189 3294</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Social Media</h5>
+                                <div class="d-flex gap-3 mt-2">
+                                    <a target="_blank"
+                                        href="https://www.linkedin.com/in/dinayadura-menula-sasen-de-silva-573810310/"
+                                        class="text-dark fs-4"><i class="fab fa-linkedin"></i></a>
+                                    <a target="_blank" href="https://github.com/DMS-Menula" class="text-dark fs-4"><i
+                                            class="fab fa-github"></i></a>
+                                    <a target="_blank" href="https://www.youtube.com/@blockcodingpro?sub_confirmation=1"
+                                        class="text-dark fs-4"><i class="fab fa-youtube"></i></a>
+                                    <a target="_blank" href="https://stackoverflow.com/users/30327666/menula-de-silva"
+                                        class="text-dark fs-4"><i class="fab fa-stack-overflow"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/share/17pU7kXijN/"
+                                        class="text-dark fs-4"><i class="fab fa-facebook"></i></a>
+                                    <a target="_blank" href="https://x.com/dmsmenula"
+                                class="text-dark fs-4"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-5">
+                            <h4 class="mb-4 fs-4">Send me a message</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Your Message" id="message"
+                                                style="height: 150px"></textarea>
+                                            <label for="message">Your Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary btn-lg px-4 py-2" type="submit">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="mb-4 fs-3 fw-bolder"
+                        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Menula <span
+                            class="text-primary">De Silva</span></h3>
+                    <p>Creating digital experiences that inspire and engage users through thoughtful design and clean
+                        code.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#skills" class="text-white text-decoration-none">Skills</a></li>
+                        <li class="mb-2"><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Newsletter</h4>
+                    <p>Subscribe to my newsletter for the latest updates and projects.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your Email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Menula De Silva. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/dinayadura-menula-sasen-de-silva-573810310/"
+                            class="text-white fs-5"><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/DMS-Menula" class="text-white fs-5"><i
+                                class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/@blockcodingpro?sub_confirmation=1"
+                            class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                        <a target="_blank" href="https://stackoverflow.com/users/30327666/menula-de-silva"
+                            class="text-white fs-5"><i class="fab fa-stack-overflow"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/share/17pU7kXijN/" class="text-white fs-5"><i
+                                class="fab fa-facebook"></i></a>
+                                <a target="_blank" href="https://x.com/dmsmenula"
+                                class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5L8ER5J8QD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5L8ER5J8QD");
+    </script>
+</body>
+
+</html>
