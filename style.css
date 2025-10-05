@@ -88,13 +88,13 @@ h4 {
 }
 
 .skill-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1s ease, box-shadow 1s ease;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
