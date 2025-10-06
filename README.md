@@ -17,7 +17,7 @@
 
 ### 👋 Hello World! I'm Menula!
 
-- 🧠 I’m currently learning **React Native**, **Flutter**, **AI**, and **Full Stack Web Dev**  
+- 🧠 I’m currently learning **React Native**, **Flutter**, **AI**, and **Full Stack Web Dev**   
 - 💻 I love building responsive websites & apps with clean UI/UX  
 - 🌍 From: **Ratnapura, Sri Lanka 🇱🇰**  
 - ✨ I'm only **12 years old**, but my dreams are BIG!  
