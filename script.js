@@ -200,3 +200,45 @@ function initFallbackAnimation() {
     container.appendChild(shape);
   }
 }
+
+
+const cursorRing = document.createElement("div");
+cursorRing.classList.add("cursor-ring");
+document.body.appendChild(cursorRing);
+
+const cursorDot = document.createElement("div");
+cursorDot.classList.add("cursor-dot");
+document.body.appendChild(cursorDot);
+
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
+const speed = 0.15; 
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animate() {
+  ringX += (mouseX - ringX) * speed;
+  ringY += (mouseY - ringY) * speed;
+
+  cursorRing.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`;
+  cursorDot.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    cursorRing.style.width = "50px";
+    cursorRing.style.height = "50px";
+    cursorRing.style.borderColor = "#0f52ba";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursorRing.style.width = "36px";
+    cursorRing.style.height = "36px";
+    cursorRing.style.borderColor = "#bfa17f";
+  });
+});
