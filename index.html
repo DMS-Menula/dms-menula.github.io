@@ -715,7 +715,7 @@
     </style>
 </head>
 
-<body>
+<body id="#page">
 
     <header>
         <div class="logo">dmsmenula</div>
@@ -1243,6 +1243,14 @@
 
             document.getElementById('year').textContent = new Date().getFullYear();
         });
+
+        const targetElement = document.querySelector('#page');
+
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
     </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5L8ER5J8QD"></script>
